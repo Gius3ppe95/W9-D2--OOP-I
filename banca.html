@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conti Correnti</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+
+      .container {
+        margin-top: 50px;
+      }
+
+      .card {
+        border: 1px solid #ced4da;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-body {
+        padding: 20px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      input {
+        margin-bottom: 10px;
+      }
+
+      button {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Conto Figlio</h5>
+              <p class="card-text" id="saldoFiglio"></p>
+              <label for="depositoFiglio">Deposito:</label>
+              <input type="number" id="depositoFiglio" class="form-control" />
+              <label for="prelievoFiglio">Prelievo:</label>
+              <input type="number" id="prelievoFiglio" class="form-control" />
+              <button onclick="effettuaDepositoFiglio()" class="btn btn-primary">Deposita</button>
+              <button onclick="effettuaPrelievoFiglio()" class="btn btn-danger">Preleva</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Conto Madre</h5>
+              <p class="card-text" id="saldoMadre"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./banca.js"></script>
+  </body>
+</html>
